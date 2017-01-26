@@ -1,0 +1,35 @@
+{
+    "scopeName": "source.ctscript",
+    "name": "CtScript",
+    "fileTypes": [
+        ".cts",
+        ".ctscript"
+    ],
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.ctscript",
+                "match": "\\b(if|while|for|return)\\b"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.ctscript",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.ctscript",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+}
